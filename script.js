@@ -52,8 +52,12 @@ function lightDarkMode() {
   const fgcolor = getComputedStyle(document.documentElement).getPropertyValue(
     "--fgcolor"
   );
+  const logo = document.getElementById("logo");
+  logo.src = mode == "dark" ? 'tangle-dark.svg' : 'tangle-light.svg';
+
   document.documentElement.style.setProperty("--bgcolor", fgcolor);
   document.documentElement.style.setProperty("--fgcolor", bgcolor);
+
 }
 
 // function to create permuted alphabet
